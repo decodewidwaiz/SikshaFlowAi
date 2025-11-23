@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SikshaFlow AI - your learning companion</title>
+    
+    <!-- Google Translate JavaScript API -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: 'en',
+            includedLanguages: 'bn,hi,or,kn,mr,ta', // Only 6 specific Indian languages: Bengali, Hindi, Odia, Kannada, Marathi, Tamil
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+          },
+          'google_translate_element'
+        );
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <!-- Enhanced styles for the translator -->
+    <style>
+      #google_translate_element {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 10000;
+      }
+      
+      /* Style the dropdown with gradient background */
+      .goog-te-combo {
+        background: linear-gradient(to right, #ffffff, #ffcccc);
+        border: 1px solid #e2e8f0;
+        border-radius: 9999px;
+        padding: 8px 36px 8px 40px;
+        font-size: 14px;
+        color: #334155;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        min-width: 160px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        font-family: 'Inter', sans-serif;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        position: relative;
+      }
+      
+      .goog-te-combo:hover {
+        border-color: #cbd5e1;
+        background: linear-gradient(to right, #f8fafc, #ff9999);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        transform: translateY(-2px);
+      }
+      
+      .goog-te-combo:focus {
+        border-color: #E63946;
+        box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.3);
+      }
+      
+      /* Add globe icon */
+      #google_translate_element::before {
+        content: "🌐";
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        pointer-events: none;
+      }
+      
+      /* Add custom caret */
+      #google_translate_element::after {
+        content: "▾";
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: #94a3b8;
+        pointer-events: none;
+      }
+      
+      /* Completely hide all Google Translate elements except the dropdown */
+      .goog-logo-link, 
+      .goog-te-banner-frame,
+      .goog-te-menu-value span:first-child,
+      .goog-te-gadget-icon,
+      #\:0\.targetLanguage,
+      .goog-te-gadget .goog-te-combo {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        width: 0 !important;
+        position: absolute !important;
+        top: -9999px !important;
+        left: -9999px !important;
+      }
+      
+      .goog-te-gadget {
+        color: transparent !important;
+        font-size: 0 !important;
+      }
+      
+      /* Hide the Google Translate bar that appears at the top */
+      .goog-te-banner-frame {
+        display: none !important;
+        height: 0 !important;
+        border: none !important;
+        visibility: hidden !important;
+      }
+      
+      /* Additional styling to hide the translate bar */
+      body {
+        top: 0px !important;
+      }
+      
+      .goog-te-balloon-frame {
+        display: none !important;
+        visibility: hidden !important;
+      }
+      
+      #goog-gt-tt {
+        display: none !important;
+        visibility: hidden !important;
+      }
+      
+      /* Hide the iframe */
+      iframe.goog-te-menu-frame {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        width: 0 !important;
+        position: absolute !important;
+        top: -9999px !important;
+        left: -9999px !important;
+      }
+      
+      /* Force hide any remaining Google elements */
+      .goog-te-menu-frame,
+      .goog-te-menu-frame *,
+      .goog-te-banner *,
+      .goog-te-balloon-frame * {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        width: 0 !important;
+        position: absolute !important;
+        top: -9999px !important;
+        left: -9999px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Container for Google Translate widget with enhanced styling -->
+    <div id="google_translate_element"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
